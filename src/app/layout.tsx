@@ -1,3 +1,6 @@
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
 import './globals.css'
 
 export const metadata = {
@@ -12,7 +15,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={{background: 'linear-gradient(190deg, rgba(2,37,89,1) 46%, rgba(21,41,69,0.9612219887955182) 65%)'}}>
+        <div className='fixed left-5 hidden mylg:block' style={{bottom: '-500px'}}>
+        <Sidebar />
+        </div>
+        <Header />
+        {children}
+        <div className='mylg:hidden'>
+          <Footer />
+        </div>
+        </body>
     </html>
   )
 }
