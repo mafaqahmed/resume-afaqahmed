@@ -19,8 +19,8 @@ const ExperienceCard = (props:prop) => {
         {item.startingDate} - {item.endingDate}
       </p>
       <ul className="list-square">
-        {item.desc.map((el:string, ind) => (
-          <li key={ind}>
+        {item.desc.map((el:string) => (
+          <li key={el}>
             <p className="text-gray-400 mb-3">{el}</p>
           </li>
         ))}
