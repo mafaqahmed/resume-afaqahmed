@@ -20,8 +20,8 @@ const ExperienceCard = (props:prop) => {
       </p>
       <ul className="list-square">
         {item.desc.map((el:string, ind) => (
-          <li>
-            <p className="text-gray-400 mb-3" key={ind}>{el}</p>
+          <li key={ind}>
+            <p className="text-gray-400 mb-3">{el}</p>
           </li>
         ))}
       </ul>
