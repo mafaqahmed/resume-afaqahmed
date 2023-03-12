@@ -26,13 +26,13 @@ const ProjectCard = (props: prop) => {
             {item.title.slice(0, 30)}...
           </p>
           <div className="text-gray-400 text-sm">
-            {item.desc.map((el: string) => (
-              <p className="text-gray-400 mb-3">{el.slice(0, 80)}...</p>
+            {item.desc.map((el: string, ind) => (
+              <p className="text-gray-400 mb-3" key={ind}>{el.slice(0, 80)}...</p>
             ))}
           </div>
           <p className="whitespace-nowrap">
             {item.tools.map((el) => (
-              <span className="inline-block px-2 text-sm font-semibold text-blue-400 mt-2">
+              <span className="inline-block px-2 text-sm font-semibold text-blue-400 mt-2" key={el}>
                 #{el}
               </span>
             ))}

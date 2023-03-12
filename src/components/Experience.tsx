@@ -23,7 +23,7 @@ const Experience = () => {
         <div className="flex flex-col justify-center items-center w-full space-y-10">
           <div className="flex flex-row ">
             {['pasha', 'pel', 'pac'].map(item => (
-            <button className={`border-b-2 ease-in-out duration-200 w-24 py-3 uppercase ${work === item ? 'border-white text-white':'border-gray-400 text-gray-400'}`} onClick={() => setWork(item)}>{item}</button>
+            <button key={item} className={`border-b-2 ease-in-out duration-200 w-24 py-3 uppercase ${work === item ? 'border-white text-white':'border-gray-400 text-gray-400'}`} onClick={() => setWork(item)}>{item}</button>
             ))}
           </div>
           <div className="max-w-xl sm:h-96">
@@ -31,7 +31,7 @@ const Experience = () => {
               experienceData.map(item => {
                 if(item.title === work){
                   return <>
-                  <ExperienceCard item={item}/>
+                  <ExperienceCard item={item} key={item.title}/>
                   </>
                 }
               })
