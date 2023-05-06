@@ -4,6 +4,7 @@ import { BiMenu } from "react-icons/bi";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { Link } from "react-scroll";
+import NextLink from "next/link";
 import MobileMenu from "./MobileMenu";
 
 export default function Header() {
@@ -85,9 +86,9 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <button className="bg-yellow-500 hover:bg-white text-black py-3 px-12 rounded-full text-xs uppercase ease-in-out duration-300">
+              <NextLink href='/files/afaqahmedCV.pdf' className="bg-yellow-500 hover:bg-white text-black py-3 px-12 rounded-full text-xs uppercase ease-in-out duration-300">
                 Resume
-              </button>
+              </NextLink>
             </li>
           </ul>
         </div>
